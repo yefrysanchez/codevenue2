@@ -28,7 +28,7 @@ const SideMenu = ({ setIsOpen }: SideMenuProps) => {
   };
 
   return (
-    <div className="fixed lg:hidden text-3xl top-0 left-0 right-0 bottom-0 w-full h-full bg-primary/30 backdrop-blur-sm flex flex-col justify-center items-center gap-4">
+    <div className="fixed lg:hidden text-3xl top-0 left-0 right-0 bottom-0 w-full h-full bg-darkAlt/80 backdrop-blur-sm flex flex-col justify-center items-center gap-4">
       <ul className="flex flex-col  gap-8">
         {navlinks.map((link) => (
           <li onClick={() => setIsOpen(false)} key={link.link}>

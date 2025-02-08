@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header>
+    <header className="z-50">
       <nav className="p-4 flex lg:flex-col justify-between items-center lg:w-fit gap-4">
         <div>
           <Image width={32} height={32} src={"/logo.png"} alt="logo" />

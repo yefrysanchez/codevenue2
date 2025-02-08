@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["100", "400", "700"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["100","200", "400", "700"] });
 export const metadata: Metadata = {
   title: "CodeVenue",
   description:
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased bg-dark text-light`}>
-        <main className="flex flex-col lg:flex-row min-h-screen">
+        <main className="flex flex-col lg:flex-row min-h-screen w-full max-w-7xl mx-auto">
           <Navbar />
           {children}
         </main>

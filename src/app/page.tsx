@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import Hero from "./components/Hero";
+import RecentlyPlayed from "./components/RecentlyPlayed";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
           className="p-1 focus:outline-none bg-transparent w-full max-w-xl placeholder:text-light/40"
         />
       </div>
-      <div>
+      <div className="flex flex-col gap-8 lg:flex-row ">
         <Hero />
+        <RecentlyPlayed />
       </div>
     </div>
   );

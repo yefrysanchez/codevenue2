@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-darkAlt p-4 rounded-lg">
+    <section className="bg-darkAlt p-4 rounded-lg lg:w-1/2">
       <h1 className="font-bold mb-2 tracking-tighter capitalize text-2xl">
         Welcome to CodeVenue
       </h1>
