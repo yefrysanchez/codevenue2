@@ -53,7 +53,7 @@ const Navbar = () => {
           </button>
         </ul>
         <button onClick={() => setIsOpen(true)} className="lg:hidden">
-          <TbMenu />
+          <TbMenu size={25} />
         </button>
         {isOpen && <SideMenu setIsOpen={setIsOpen} />}
       </nav>
