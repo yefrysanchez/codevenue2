@@ -18,11 +18,15 @@ const Navbar = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
   return (
     <header className="z-50">
       <nav className="p-4 flex lg:flex-col justify-between items-center lg:w-fit gap-4">
-        <div>
+        <div className="flex items-center gap-2">
           <Image width={32} height={32} src={"/logo.png"} alt="logo" />
+          <span className="font-bold tracking-[-2px] text-3xl lg:hidden">
+            CodeVenue
+          </span>
         </div>
         <ul className="hidden bg-darkAlt w-fit p-4 lg:flex flex-col gap-4 rounded-2xl">
           {navlinks.map((link) => (
@@ -48,9 +52,11 @@ const Navbar = () => {
           >
             <FaUser size={20} />
           </Link>
-          <button className="text-red-800 hover:text-red-500 transition-colors">
-            <CiLogout size={20} />
-          </button>
+          {isLogged && (
+            <button className="text-red-800 hover:text-red-500 transition-colors">
+              <CiLogout size={20} />
+            </button>
+          )}
         </ul>
         <button onClick={() => setIsOpen(true)} className="lg:hidden">
           <TbMenu size={25} />

@@ -30,7 +30,7 @@ const TrackCard = () => {
 
       {/* Track Info */}
       <div onClick={handlePlay} className="flex cursor-pointer flex-col">
-        <span id="track-title" className="font-semibold">
+        <span className="font-semibold">
           Golden age of 80s
         </span>
         <span className="font-extralight text-light/80 text-sm">

@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { CiSearch } from "react-icons/ci";
+import Player from "./components/Player";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["100","200", "400", "700"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "400", "700"],
+});
 export const metadata: Metadata = {
   title: "CodeVenue",
   description:
@@ -18,10 +23,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased bg-dark text-light`}>
-        <main className="flex flex-col lg:flex-row min-h-screen w-full max-w-7xl mx-auto">
+        <main className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto">
           <Navbar />
-          {children}
+          <div>
+            <div className="hidden lg:flex items-center py-4 gap-2 w-full">
+              <CiSearch className="text-light/50" size={25} />
+              <input
+                type="search"
+                name="search-music"
+                placeholder="Search"
+                className="p-1 focus:outline-none bg-transparent w-full max-w-xl placeholder:text-light/40"
+              />
+            </div>
+            {children}
+          </div>
         </main>
+        <footer>
+          <Player />
+        </footer>
       </body>
     </html>
   );
