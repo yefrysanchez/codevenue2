@@ -5,10 +5,10 @@ import { IoIosVolumeHigh } from "react-icons/io";
 
 const Player = () => {
   return (
-    <div className="w-full h-32 bg-darkAlt/50 shadow-md px-4 lg:pr-0 lg:pl-20 backdrop-blur-md fixed top-12 left-0">
+    <div className="w-full z-50 h-32 bg-darkAlt/50 shadow-md px-4 lg:pr-0 lg:pl-20 backdrop-blur-md fixed bottom-0 left-0">
       <div className="max-w-6xl h-full mx-auto flex items-center">
         {/* Track info */}
-        <div className="flex items-center gap-4 h-full">
+        <div className="flex items-center gap-4 h-full w-full md:w-auto">
           <div>
             <Image
               width={49}
@@ -29,14 +29,15 @@ const Player = () => {
         {/* Player controls */}
         <PlayerControls />
         {/* Volume control */}
-        <div className="hidden md:flex items-center ">
-            <span className="text-light/80"><IoIosVolumeHigh size={30}/>
-            </span>
+        <div className="hidden md:flex items-center">
+          <span className="text-light/80">
+            <IoIosVolumeHigh size={30} />
+          </span>
           <input
-        
+            aria-label="Volume"
             type="range"
             name="volume"
-            className="w-24 "
+            className="w-24"
             min={0}
             max={100}
             defaultValue={100}

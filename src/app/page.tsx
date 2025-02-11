@@ -1,4 +1,5 @@
 
+import Genres from "./components/Genres";
 import Hero from "./components/Hero";
 import RecentlyPlayed from "./components/RecentlyPlayed";
 
@@ -10,6 +11,9 @@ export default function Home() {
         <Hero />
         <RecentlyPlayed />
       </div>
+
+      <Genres />
     </div>
   );
 }
+
