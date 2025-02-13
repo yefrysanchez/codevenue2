@@ -26,7 +26,7 @@ export default function RootLayout({
         <main className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto">
           <Navbar />
           <div>
-            <div className="hidden lg:flex items-center py-4 gap-2 w-full">
+            <div className="hidden sticky top-0 left-0 lg:flex items-center py-4 gap-2 w-full bg-dark">
               <CiSearch className="text-light/50" size={25} />
               <input
                 type="search"

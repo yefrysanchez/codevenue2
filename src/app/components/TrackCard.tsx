@@ -1,12 +1,8 @@
 "use client";
-
 import Image from "next/image";
-import React, { useState } from "react";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import LikeBtn from "./LikeBtn";
 
 const TrackCard = () => {
-  const [isLiked, setIsLiked] = useState(false);
-
   const handlePlay = () => {
     console.log("playing track");
   };
@@ -30,9 +26,7 @@ const TrackCard = () => {
 
       {/* Track Info */}
       <div onClick={handlePlay} className="flex cursor-pointer flex-col">
-        <span className="font-semibold">
-          Golden age of 80s
-        </span>
+        <span className="font-semibold">Golden age of 80s</span>
         <span className="font-extralight text-light/80 text-sm">
           Sean Swadder
         </span>
@@ -40,18 +34,9 @@ const TrackCard = () => {
       </div>
 
       {/* Like Button */}
-      <button
-        onClick={() => setIsLiked(!isLiked)}
-        className="absolute active:opacity-70 right-4 top-4 lg:bottom-4 lg:top-auto focus:outline-none rounded-full p-1"
-        aria-label={isLiked ? "Unlike track" : "Like track"}
-        aria-pressed={isLiked}
-      >
-        {isLiked ? (
-          <FaHeart className="text-secundary" size={25} />
-        ) : (
-          <FaRegHeart size={25} />
-        )}
-      </button>
+      <div className="absolute  right-4 top-4 lg:bottom-4 lg:top-auto">
+        <LikeBtn />
+      </div>
     </div>
   );
 };
