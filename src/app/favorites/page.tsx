@@ -12,7 +12,7 @@ const Favorites = () => {
       <section className="flex flex-col lg:flex-row items-center mb-12">
         <Hero />
 
-        <div className="w-full p-4 relative">
+        <div className="w-full lg:w-1/2 p-4 relative">
           <h2 className="text-3xl lg:text-6xl mb-4 tracking-tighter capitalize font-bold">
             Your favorites Songs
           </h2>

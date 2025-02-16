@@ -9,8 +9,8 @@ const SongCards = () => {
       <div className="flex gap-4 col-span-2 md:col-span-3">
         <Image
           src={"/sample-track.png"}
-          width={39}
-          height={39}
+          width={40}
+          height={40}
           alt="song picture"
           className="h-10 w-10"
         />

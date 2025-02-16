@@ -23,7 +23,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogged, setIsLogged] = useState(true);
   return (
-    <header className="z-[1000] sticky left-0 top-0 bg-dark">
+    <header className="z-[1000] sticky left-0 top-0 ">
       <nav className="sticky left-0 top-0 p-4 flex lg:flex-col justify-between items-center lg:w-fit gap-4">
         <div className="flex items-center gap-2">
           <Image width={32} height={32} src={"/logo.png"} alt="logo" />

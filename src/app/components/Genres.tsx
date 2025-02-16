@@ -1,5 +1,6 @@
 import React from "react";
 import GenreCard from "./GenreCard";
+import { genres } from "../data/genres";
 
 const Genres = () => {
   return (
@@ -21,35 +22,4 @@ const Genres = () => {
 
 export default Genres;
 
-const genres = [
-  {
-    title: "Hip Hop",
-    link: "/genre/hip-hop",
-    img: "/hiphop.webp",
-  },
-  {
-    title: "Pop",
-    link: "/genre/pop",
-    img: "/pop.webp",
-  },
-  {
-    title: "Chill House",
-    link: "/genre/chill-house",
-    img: "/chillhouse.webp",
-  },
-  {
-    title: "Latino",
-    link: "/genre/latino",
-    img: "/latino.webp",
-  },
-  {
-    title: "Coding",
-    link: "/genre/coding",
-    img: "/coding.webp",
-  },
-  {
-    title: "Jazz",
-    link: "/genre/jazz",
-    img: "/jazz.webp",
-  },
-];
+
