@@ -1,8 +1,11 @@
 import React from 'react'
+import Login from '../components/Login'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <div className=' flex justify-center min-h-[80vh]'>
+      <Login />
+    </div>
   )
 }
 
