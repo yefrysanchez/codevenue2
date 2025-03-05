@@ -1,6 +1,10 @@
 import React from "react";
 
-const Login = () => {
+type LoginProps = {
+  setIsRegistered: (isLogged: boolean) => void;
+}
+
+const Login = ({setIsRegistered}:LoginProps) => {
   return (
     <form className="bg-white max-w-md w-full h-fit  shadow-md rounded-xl px-8 pt-6 pb-20 mb-4 text-dark">
       <h2 className="font-bold text-2xl text-center mt-12">Login</h2>
@@ -25,7 +29,7 @@ const Login = () => {
       >
         Login
       </button>
-      <div className="flex flex-col items-center mt-12 gap-4">
+      <div className="flex flex-col items-center mt-8 gap-4">
         <span className="text-darkAlt/40 text-sm ">
           Forgot{" "}
           <span className="text-secundary font-bold hover:underline cursor-pointer">
@@ -36,6 +40,7 @@ const Login = () => {
         <span className="text-darkAlt/40 text-sm ">
           Don&apos;t have an account?{" "}
           <button
+          onClick={() => setIsRegistered(false)}
             aria-label="Sign up botton"
             className="text-secundary font-bold hover:underline cursor-pointer"
           >

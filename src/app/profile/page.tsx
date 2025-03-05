@@ -1,12 +1,20 @@
-import React from 'react'
-import Login from '../components/Login'
+"use client";
+import React, { useState } from "react";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 const Profile = () => {
-  return (
-    <div className=' flex justify-center min-h-[80vh]'>
-      <Login />
-    </div>
-  )
-}
+  const [isRegistered, setIsRegistered] = useState(true);
 
-export default Profile
+  return (
+    <div className=" flex justify-center min-h-[80vh]">
+      {isRegistered ? (
+        <Login setIsRegistered={setIsRegistered} />
+      ) : (
+        <Register setIsRegistered={setIsRegistered} />
+      )}
+    </div>
+  );
+};
+
+export default Profile;
