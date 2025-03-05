@@ -25,7 +25,7 @@ const Favorites = () => {
           </button>
         </div>
       </section>
-      <section className="grid gap-2 pb-40">
+      <section className="grid gap-2">
         <SongCards />
         <SongCards />
         <SongCards />

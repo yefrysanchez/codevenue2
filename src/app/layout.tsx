@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased bg-dark text-light`}>
-        <main className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto">
+        <main className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto pb-32">
           <Navbar />
           <div className="w-full px-4 lg:pl-0 lg:pr-4">
             <div className="hidden sticky top-0 left-0 lg:flex items-center py-4 gap-2 w-full bg-dark z-40">

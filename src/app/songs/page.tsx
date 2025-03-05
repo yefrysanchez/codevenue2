@@ -8,7 +8,7 @@ const Songs = () => {
       <section className="mb-4">
         <Genres />
       </section>
-      <section className="grid gap-2 pb-40">
+      <section className="grid gap-2 ">
         <SongCards />
         <SongCards />
         <SongCards />
